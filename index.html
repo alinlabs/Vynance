@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vynance - Aplikasi Pencatatan Keuangan Pribadi & Jurnal Umum</title>
+    <meta name="description" content="Vynance adalah aplikasi pencatatan keuangan pribadi online terbaik. Kelola uang online, catat pemasukan, pengeluaran, utang piutang, jurnal umum, dan pantau sisa saldo dengan mudah (Smart Finance)." />
+    <meta name="keywords" content="Vynance, kelola uang online, aplikasi pencatatan keuangan, jurnal umum, pemasukan, pengeluaran, sisa saldo, pengatur keuangan, catat utang piutang, keuangan pribadi, smart finance, aplikasi keuangan gratis, manajemen keuangan, tracker keuangan, financial planner" />
+    <meta name="author" content="AlinLabs" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://vynance.vercel.app/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vynance.vercel.app/" />
+    <meta property="og:title" content="Vynance - Aplikasi Pencatatan Keuangan Pribadi & Jurnal Umum" />
+    <meta property="og:description" content="Vynance adalah aplikasi pencatatan keuangan pribadi online terbaik. Kelola uang online, catat pemasukan, pengeluaran, utang piutang, jurnal umum, dan pantau sisa saldo dengan mudah (Smart Finance)." />
+    <meta property="og:image" content="https://vynance.vercel.app/image/metatag.png" />
+    <meta property="og:site_name" content="Vynance" />
+    <meta property="og:locale" content="id_ID" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://vynance.vercel.app/" />
+    <meta property="twitter:title" content="Vynance - Aplikasi Pencatatan Keuangan Pribadi & Jurnal Umum" />
+    <meta property="twitter:description" content="Vynance adalah aplikasi pencatatan keuangan pribadi online terbaik. Kelola uang online, catat pemasukan, pengeluaran, utang piutang, jurnal umum, dan pantau sisa saldo dengan mudah (Smart Finance)." />
+    <meta property="twitter:image" content="https://vynance.vercel.app/image/metatag.png" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Vynance",
+      "url": "https://vynance.vercel.app/",
+      "description": "Vynance adalah aplikasi pencatatan keuangan pribadi online terbaik. Kelola uang online, catat pemasukan, pengeluaran, utang piutang, jurnal umum, dan pantau sisa saldo dengan mudah.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "IDR"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "AlinLabs"
+      }
+    }
+    </script>
+
+    <link rel="icon" type="image/x-icon" href="/image/logo-favicon.ico" />
+    <link rel="apple-touch-icon" href="/image/logo-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <script>
+      (function() {
+        var path = window.location.pathname;
+        var match = path.match(/^\/rek\/([^\/]+)\/([^\/]+)\/([^\/]+)\/?$/);
+        if (match) {
+          var bankCodeMap = {
+            'bca': 'Bank Central Asia',
+            'bni': 'Bank Negara Indonesia',
+            'bri': 'Bank Rakyat Indonesia',
+            'mandiri': 'Bank Mandiri',
+            'btn': 'Bank Tabungan Negara',
+            'jago': 'Bank Jago',
+            'neo': 'Bank Neo',
+            'seabank': 'SeaBank',
+            'allo': 'Allo Bank',
+            'dana': 'DANA',
+            'ovo': 'OVO',
+            'gopay': 'GoPay',
+            'shopeepay': 'ShopeePay'
+          };
+          var bankLogoMap = {
+            'bca': 'https://i.pinimg.com/736x/29/61/0b/29610b7dbf7e4ea5070626923a12cba8.jpg',
+            'bni': 'https://i0.wp.com/amanahfurniture.com/wp-content/uploads/2022/10/logo-bni-46.png',
+            'bri': 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Logo_Bank_Rakyat_Indonesia.svg/250px-Logo_Bank_Rakyat_Indonesia.svg.png',
+            'mandiri': 'https://ui-avatars.com/api/?name=BM&background=1e3a8a&color=fff',
+            'btn': 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/BTN_2024.svg/250px-BTN_2024.svg.png',
+            'jago': 'https://www.jago.com/favicon/og-image.png',
+            'neo': 'https://play-lh.googleusercontent.com/29-fa8r-aNxlmlyijeoxWbA41ak5wwB5sX8R1o50pIYEwjSDQb-d6GrApVeyJn3ddw=s48-rw',
+            'seabank': 'https://play-lh.googleusercontent.com/ZGLrjk0PKIj2L4DaWiKmhAf0f6cBXml6eHgjRpJhQ4XQpGvw4T5d4hjl_EQF5jY9Vked=s48-rw',
+            'allo': 'https://play-lh.googleusercontent.com/0gw4GVJoKuQCDIz8DOXt5fQDEy-RD0BDnQge-BsbnBaBTmXWgqjydABvetmCqTXE1Gm2=w48-h48-rw',
+            'dana': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRhvs9h_tTVvV-4g-BE7r4ALtNl5wvkuNwAg&s',
+            'ovo': 'https://iconlogovector.com/uploads/images/2024/03/lg-65e38949ad9b9-OVO.webp',
+            'gopay': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU1_u4kBagPaDWERIyFFmDI8VxkzZEd4YFWQ&s',
+            'shopeepay': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnQ54gdjaHKfhtVWT3C1n-gLZljKqucGLOeg&s'
+          };
+          var code = match[1].toLowerCase();
+          var bankName = bankCodeMap[code] || match[1].toUpperCase();
+          var bankLogo = bankLogoMap[code] || 'https://vynance.vercel.app/image/logo-full-text-color.png';
+          var slugName = match[3];
+          
+          var accountName = slugName.split('-').map(function(word) {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+          }).join(' ');
+          
+          var title = "Rekening " + bankName + " a.n. " + accountName;
+          var description = "Kirim ke rekening " + bankName + " atas nama " + accountName + " dengan mudah dan cepat.";
+          var url = window.location.href;
+          
+          document.title = title;
+          document.querySelector('meta[name="description"]').setAttribute("content", description);
+          document.querySelector('meta[property="og:title"]').setAttribute("content", title);
+          document.querySelector('meta[property="og:description"]').setAttribute("content", description);
+          document.querySelector('meta[property="og:url"]').setAttribute("content", url);
+          document.querySelector('meta[property="og:image"]').setAttribute("content", bankLogo);
+          document.querySelector('meta[property="twitter:title"]').setAttribute("content", title);
+          document.querySelector('meta[property="twitter:description"]').setAttribute("content", description);
+          document.querySelector('meta[property="twitter:url"]').setAttribute("content", url);
+          document.querySelector('meta[property="twitter:image"]').setAttribute("content", bankLogo);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
